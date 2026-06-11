@@ -2,11 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
 :root {
-    --primary: #F9DF7B;
-    --secondary: #A9C45D;
-    --tertiary: #e2683b; 
-    --quaternary: #F8AB06;
-    --quinary: #67932F;
+    --primary: #fdf5e6;
+    --secondary: #c5d1b2;
+    --tertiary: #ea965e; 
+    --quaternary: #556b2f;
 }
 
 h1, h2, h3, h4 {
@@ -41,29 +40,41 @@ p{
 /*--- Header custom CSS---*/
 
 #hero {
-    background-color: var(--secondary);
+    background-color: var(--quaternary);
 }
 
 .badge {
-    background-color: var(--quaternary);
+    background-color: var(--tertiary);
 }
 
 .texto-destacado {
     color: var(--tertiary);
 }
 
+/*--- Botones ---*/
 .btn-hero {
-    background-color: var(--quaternary);
+    background-color: var(--tertiary); /* Naranja/Durazno para la acción principal */
+    color: white;
     border: none;
-}
-
-.btn-hero {
     transition-duration: 0.4s;
 }
 
 .btn-hero:hover {
-    background-color: var(--tertiary);
+    background-color: var(--secondary); /* Verde Salvia al pasar el mouse */
+    color: #333; /* Texto oscuro para que se lea sobre el salvia */
+}
+
+/* Nuevo botón con borde (Outline) para fondos oscuros */
+.btn-hero-outline {
+    background-color: transparent;
     color: white;
+    border: 2px solid white;
+    transition-duration: 0.4s;
+}
+
+.btn-hero-outline:hover {
+    background-color: white;
+    color: var(--quaternary); /* Verde oliva oscuro */
 }
 
 .img-hero {
@@ -100,12 +111,13 @@ p{
     width: 2rem;
 }
 
+/*--- Tarjetas Sobre Mí ---*/
 .card-about {
-    background-color: #ffffe6;
+    background-color: var(--primary); /* Fondo crema suave */
     border-width: 2px;
-    border-color: #eb987a;
+    border-color: var(--tertiary); /* Borde durazno */
     position: relative;
-    transition: opacity 0.3s ease, box-shadow 0.3s ease; /* Transición suave para opacidad y sombra */
+    transition: opacity 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card-about:hover {
@@ -148,18 +160,19 @@ p{
     margin-top: 1.5rem;
 }
 
+/*--- Tarjetas Mis Consultas ---*/
 .card-consulta {
     margin-top: 1rem;
-    background-color: var(--secondary);
+    background-color: white; /* Fondo blanco para limpiar */
     border-width: 2px;
-    border-color: var(--quinary);
+    border-color: var(--secondary); /* Borde verde salvia */
     position: relative;
-    transition: opacity 0.3s ease, box-shadow 0.3s ease; /* Transición para opacidad y sombra */
+    transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .card-consulta:hover {
-    opacity: 0.9; /* Disminuye un poco la opacidad */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Sombra más grande */
+    transform: translateY(-5px); /* Efecto lindo: se levanta un poquito */
+    box-shadow: 0 6px 20px rgba(85, 107, 47, 0.2); /* Sombra color oliva suave */
 }
 
 
